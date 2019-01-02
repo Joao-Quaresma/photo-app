@@ -9,6 +9,18 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
+    :authentication => :plain,
+    :user_name => Rails.application.credentials[:sendgrid][:user_name],
+    :password => Rails.application.credentials[:sendgrid][:password],
+    :domain => 'heroku.com',
+    :enable_starttls_auto => true
+  }
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { :host => 'localhost:4000' }
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
@@ -58,4 +70,5 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
 end
