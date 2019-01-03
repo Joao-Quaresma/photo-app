@@ -1,6 +1,6 @@
 <% if Rails.env == "production" %>
   <script language="Javascript">
-    Stripe.setPublishableKey("<%= ENV['stripe_publishable_key'] %>");
+    Stripe.setPublishableKey("<%= Rails.application.credentials[:production][:stripe_publishable_key] %>");
   </script>
 <% else %>
   <script language="Javascript">
