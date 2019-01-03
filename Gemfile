@@ -17,6 +17,9 @@ gem 'devise-bootstrap-views'
 gem 'jquery-rails'
 gem 'sendgrid-ruby'
 gem 'stripe'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 group :development, :test do
   gem 'sqlite3'
