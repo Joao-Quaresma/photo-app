@@ -16,6 +16,7 @@ gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'jquery-rails'
 gem 'sendgrid-ruby'
+gem 'stripe'
 
 group :development, :test do
   gem 'sqlite3'
