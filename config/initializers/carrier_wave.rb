@@ -1,4 +1,3 @@
-ines (10 sloc)  285 Bytes
 if Rails.env.production?
   CarrierWave.configure do |config|
     config.fog_credentials = {
