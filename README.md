@@ -1,24 +1,27 @@
 # README
+```
+Ruby        2.5.1p57
+Bundler     1.17.1
+Rails       5.2.2
+Mysql       Ver 14.14 Distrib 5.6.35
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+This app allows users to:
+- Register / login
+- Upload images (edit/delete)
+```
 
-Things you may want to cover:
+```
+What was used:
+- Devise
+- 
+- Carrier wave - to upload images
+- S3 for storage (and fog)
+- mini_magick for image conversion
+- Stripe for payments (The user needs to select a plan at the registration step)
+- Sendgrid for Emails
+- Bootstrapt + Twitter Bootstrap for Front End
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Prod Url -> https://joao-photo-app.herokuapp.com/
